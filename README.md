@@ -2,6 +2,10 @@
 
 API to check if the bathroom is available.
 
+## Configuration
+
+Edit docker-compose.yml
+
 ## Run
 
 ```docker-compose up```
