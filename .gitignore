@@ -130,5 +130,6 @@ __pychache__/
 *.pyc
 datadir/
 src/supervisord.pid
+supervisord.pid
 
 docker-compose-prod.yml
