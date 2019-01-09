@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    network_mode: bridge
+    working_dir: /app/src
+    command: "flask run --host=0.0.0.0"
+    volumes:
+      - .:/app
+    ports:
+      - "32450:5000"
+    environment:
+      FLASK_APP: main.py
+      FLASK_DEBUG: 1
+      MYSQL_DB: bathy
+      MYSQL_SERVER: host
+      MYSQL_PASSWD: user
+      MYSQL_USER: pass
+      
+      SLACK_NOTIFICATION_TOKEN: slack_token
+      SLACK_NOTIFICATION_CHANNEL: '#slack_channel'
+

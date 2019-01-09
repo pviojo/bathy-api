@@ -1,0 +1,6 @@
+Flask-API
+mysql-connector
+mysqlclient
+flask-sqlalchemy
+flask-migrate
+flask-cors
