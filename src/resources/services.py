@@ -17,3 +17,8 @@ class ResourceService:
     def get(id):
         resource = Resource.query.filter_by(id=id).first()
         return resource
+
+    @staticmethod
+    def all():
+        resource = Resource.query.order_by(Resource.label).all()
+        return resource

@@ -25,3 +25,15 @@ def get_resource(id):
 
 
 
+
+
+@app.route("/resources", methods=['GET'])
+def get_all():
+    resources = ResourceService.all()
+    if not resources:
+        abort(404)
+    
+    return ([resource.json() for resource in resources], 200) 
+
+
+
